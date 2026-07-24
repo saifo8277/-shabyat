@@ -60,7 +60,8 @@
             { title: "ابو فيصل - ياخساره", file: "unknown - ابو فيصل - ياخساره.mp3" },
             { title: "نواف الأسمري", file: "._نواف_الاسمري1_MP3_160K" },
             { title: "نوادر منوعات شعبي - نواف الأسمري", file: "نوادر_منوعات_شعبي_نواف_الاسمري_MP3_160K__1.mp3" },
-            { title: "اخ الذي كسر الصوت", file: "اخ الذي كسر الصوت.mp3" } // الأغنية الجديدة انضافت هنا
+            { title: "اخ الذي كسر الصوت", file: "اخ الذي كسر الصوت.mp3" },
+            { title: "كسرات لزلايب موسى الزهراني والباكستاني منير البلوشي", file: "كسرات_لزلايب_موسى_الزهراني_والباكستاني_منير_البلوشي.m4a" }
         ];
 
         const playlistContainer = document.getElementById('playlist');
@@ -72,6 +73,7 @@
                 <div class="song-title">${song.title}</div>
                 <audio controls preload="none">
                     <source src="${song.file}" type="audio/mpeg">
+                    <source src="${song.file}" type="audio/mp4">
                     متصفحك لا يدعم مشغل الصوت.
                 </audio>
             `;
