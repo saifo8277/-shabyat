@@ -50,15 +50,33 @@
 
     <h1>شعبيات الخليج</h1>
 
-    <div class="playlist">
-        <div class="song-card">
-            <div class="song-title">الأغنية الأولى</div>
-            <audio controls>
-                <source src="shaby1.mp3" type="audio/mpeg">
-                متصفحك لا يدعم مشغل الصوت.
-            </audio>
-        </div>
+    <div class="playlist" id="playlist">
+        <!-- الأغاني ستظهر هنا تلقائياً بفضل الكود الذكي بالأسفل -->
     </div>
+
+    <script>
+        // هنا نضع قائمة الأغاني.. كل ما ترفع أغنية جديدة، فقط أضف اسمها هنا في سطر جديد!
+        const songs = [
+            { title: "ابو فيصل - ياخساره", file: "unknown - ابو فيصل - ياخساره.mp3" },
+            { title: "نواف الأسمري", file: "._نواف_الاسمري1_MP3_160K" },
+            // عندما ترفع الأغنية رقم 3 ورقم 4 ورقم 50.. سنضيف أسطر تشبه هذه بالأسفل هنا بكل سهولة
+        ];
+
+        const playlistContainer = document.getElementById('playlist');
+
+        songs.forEach(song => {
+            const card = document.createElement('div');
+            card.className = 'song-card';
+            card.innerHTML = `
+                <div class="song-title">${song.title}</div>
+                <audio controls preload="none">
+                    <source src="${song.file}" type="audio/mpeg">
+                    متصفحك لا يدعم مشغل الصوت.
+                </audio>
+            `;
+            playlistContainer.appendChild(card);
+        });
+    </script>
 
 </body>
 </html>
