@@ -7,77 +7,168 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1e1e24;
-            color: #fff;
+            background-color: #1a1921; 
+            color: #ffffff;
             margin: 0;
             padding: 20px;
             text-align: center;
         }
-        h1 {
-            color: #ffcc00;
-            margin-top: 40px;
-            font-size: 36px;
-            border-bottom: 2px solid #ffcc00;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-        .playlist {
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .song-card {
-            background-color: #2a2a35;
-            padding: 15px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 500px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-        .song-title {
-            font-size: 18px;
-            margin-bottom: 10px;
+
+        /* تنسيق العنوان الرئيسي */
+        .header-title {
+            color: #f1c40f; 
+            font-size: 2.2rem;
             font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 5px;
+            display: inline-block;
         }
+
+        /* الخط الذهبي أسفل العنوان */
+        .underline {
+            width: 220px;
+            height: 3px;
+            background-color: #f1c40f;
+            margin: 0 auto 40px auto;
+        }
+
+        /* حاوية الأغاني مريحة للهواتف */
+        .playlist-container {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        /* بطاقة الأغنية المنفصلة */
+        .audio-card {
+            background-color: #25242d; 
+            border-radius: 12px;
+            padding: 20px 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* اسم الأغنية */
+        .audio-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        /* مشغل الصوت الخاص بكل بطاقة */
         audio {
             width: 100%;
+            border-radius: 30px;
+            outline: none;
+        }
+
+        /* تعديل ألوان مشغل الصوت الافتراضي ليتناسب مع الخلفية الداكنة */
+        audio::-webkit-media-controls-enclosure {
+            background-color: #32313a;
+        }
+        audio::-webkit-media-controls-panel {
+            background-color: #32313a;
+        }
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
 
-    <h1>شعبيات الخليج</h1>
+    <!-- العنوان الرئيسي والخط السفلي -->
+    <div class="header-title">شعبيات الخليج</div>
+    <div class="underline"></div>
 
-    <div class="playlist" id="playlist">
-        <!-- الأغاني تظهر هنا تلقائياً بفضل الكود الذكي -->
+    <!-- قائمة بطاقات الأغاني -->
+    <div class="playlist-container">
+
+        <div class="audio-card">
+            <div class="audio-title">ابو فيصل - ياخساره</div>
+            <audio controls data-src="ابو فيصل - يا خساره.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">نواف الأسمري</div>
+            <audio controls data-src="نواف_الاسمري_1_MP3_160K_.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">نوادر منوعات شعبي - نواف الأسمري</div>
+            <audio controls data-src="منوعات شعبي mp3.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">اخ الذي كسر الصوت</div>
+            <audio controls data-src="اخ الذي كسر الصوت.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">كسرات لزلايب موسى الزهراني والباكستاني منير البلوشي</div>
+            <audio controls data-src="راني_والباكستاني_منير_البلوشي.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">الناس قالو يمسكين كسرات</div>
+            <audio controls data-src="الناس قالو يمسكين كسرات.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">طالب من الطلاب كسرات حزينه</div>
+            <audio controls data-src="طالب من الطلاب كسرات حزينه.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">عود شعبي</div>
+            <audio controls data-src="عود شعبي.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">كسرات ازكى تحيه</div>
+            <audio controls data-src="كسرات ازكى تحيه.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">كسرات الله امرك بالستر ياهو</div>
+            <audio controls data-src="كسرات الله امرك بالستر ياهو.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">كسرات الناس قالو يمسكين</div>
+            <audio controls data-src="كسرات الناس قالو يمسكين.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">كسرات منوعه</div>
+            <audio controls data-src="كسرات منوعه.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">مانويت انساك عود</div>
+            <audio controls data-src="مانويت انساك عود.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">يا خساره وقت الي قضيته عود</div>
+            <audio controls data-src="يا خساره وقت الي قضيته عود.mp3"></audio>
+        </div>
+
+        <div class="audio-card">
+            <div class="audio-title">يما نهيت القلب عود</div>
+            <audio controls data-src="يما نهيت القلب عود.mp3"></audio>
+        </div>
+
     </div>
 
+    <!-- سكربت لتهيئة الروابط العربية تلقائياً لكي تعمل بدون مشاكل -->
     <script>
-        // قائمة الأغاني المرفوعة في حسابك
-        const songs = [
-            { title: "ابو فيصل - ياخساره", file: "unknown - ابو فيصل - ياخساره.mp3" },
-            { title: "نواف الأسمري", file: "._نواف_الاسمري1_MP3_160K" },
-            { title: "نوادر منوعات شعبي - نواف الأسمري", file: "نوادر_منوعات_شعبي_نواف_الاسمري_MP3_160K__1.mp3" },
-            { title: "اخ الذي كسر الصوت", file: "اخ الذي كسر الصوت.mp3" },
-            { title: "كسرات لزلايب موسى الزهراني والباكستاني منير البلوشي", file: "كسرات_لزلايب_موسى_الزهراني_والباكستاني_منير_البلوشي.m4a" }
-        ];
-
-        const playlistContainer = document.getElementById('playlist');
-
-        songs.forEach(song => {
-            const card = document.createElement('div');
-            card.className = 'song-card';
-            card.innerHTML = `
-                <div class="song-title">${song.title}</div>
-                <audio controls preload="none">
-                    <source src="${song.file}" type="audio/mpeg">
-                    <source src="${song.file}" type="audio/mp4">
-                    متصفحك لا يدعم مشغل الصوت.
-                </audio>
-            `;
-            playlistContainer.appendChild(card);
+        document.querySelectorAll('audio').forEach(audio => {
+            const rawSrc = audio.getAttribute('data-src');
+            if (rawSrc) {
+                audio.src = encodeURIComponent(rawSrc).replace(/%2F/g, '/');
+            }
         });
     </script>
 
